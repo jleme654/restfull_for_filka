@@ -15,8 +15,7 @@ public class NetClientPost {
 
 		try {
 
-			URL url = new URL(
-					"http://localhost:8080/RESTfulExample/json/product/post");
+			URL url = new URL("http://localhost:8080/RESTfulExample/json/product/post");
 			HttpURLConnection conn = (HttpURLConnection) url.openConnection();
 			conn.setDoOutput(true);
 			conn.setRequestMethod("POST");

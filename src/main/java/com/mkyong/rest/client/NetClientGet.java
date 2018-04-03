@@ -14,15 +14,14 @@ public class NetClientGet {
 
 		try {
 
-			URL url = new URL(
-					"http://localhost:8080/RESTfulExample/json/product/get");
+			URL url = new URL("http://localhost:8080/RESTfulExample/json/product/get");
 			HttpURLConnection conn = (HttpURLConnection) url.openConnection();
 			conn.setRequestMethod("GET");
 			conn.setRequestProperty("Accept", "application/json");
 
-			if (conn.getResponseCode() != 200) {
+			/*if (conn.getResponseCode() != 200) {
 				throw new RuntimeException("Failed : HTTP error code : " + conn.getResponseCode());
-			}
+			}*/
 
 			BufferedReader br = new BufferedReader(new InputStreamReader(
 					(conn.getInputStream())));
